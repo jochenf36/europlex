@@ -1,0 +1,30 @@
+//- dropdown language
+ul#dropdown1.dropdown-content.languages
+  il
+    a.languages nl
+  il
+    a.languages fr  
+  il
+    a.languages eng
+    
+header
+  nav.header
+    div.nav-wrapper
+        a(href='#').brand-logo Europlex
+        ul.right.hide-on-med-and-down
+          li 
+            a(href='#test') About
+          li 
+            a(href='#test') Contact
+          li
+            a(href="#!" data-activates="dropdown1").dropdown-button
+              |nl
+              i.material-icons.right language
+              
+         ul#slide-out.side-nav
+          li 
+           a(href='#test') About
+          li 
+           a(href='#test') Contact
+        a.button-collapse(href='#' data-activates='slide-out')
+          i.mdi-navigation-menu
