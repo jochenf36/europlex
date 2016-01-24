@@ -7,7 +7,7 @@
  * Grab a custom font from Google
  */
 @import url('http://fonts.googleapis.com/css?family=Quicksand')
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 /*
  * Nib provides a CSS reset
  */
@@ -24,6 +24,9 @@ background-color = 	#0B3851
 body
   font-family 'Georgia'
   color #444
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 
 header
   font-family 'Quicksand'
@@ -42,8 +45,13 @@ header
 .content-container
  margin 50px auto
  overflow hidden
+ margin-bottom 20px
 
+main
+  flex: 1 0 auto;
 
+.contact-space
+  margin-top: 5Opx !important
 // .main-content
 //   float left
 //   width 300px
@@ -51,8 +59,31 @@ header
 //   p
 //     margin-bottom 20px
 
+.logo
+  color:white
+
+.phone
+  font-size 18px
+
+.space-row
+  height:10px
+
+#addressMap
+  width: 500px;
+  height: 400px;
+  background-color: #CCC;
+
 p
   line-height 1.8
+  font-family: 'Open Sans', sans-serif;
+
+blockquote
+  line-height 1.8
+  font-family: 'Open Sans', sans-serif;
+
+div
+  line-height 1.8
+  font-family: 'Open Sans', sans-serif;
 
 footer
   padding-top 5px

@@ -5,6 +5,7 @@
  * Grab a custom font from Google
  */
 @import url("http://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 /*
  * Nib provides a CSS reset
  */
@@ -106,6 +107,19 @@ a img {
 body {
   font-family: 'Georgia';
   color: #444;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 header {
   font-family: 'Quicksand';
@@ -124,9 +138,45 @@ header {
 .content-container {
   margin: 50px auto;
   overflow: hidden;
+  margin-bottom: 20px;
+}
+main {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+.contact-space {
+  margin-top: 5Opx !important;
+}
+.logo {
+  color: #fff;
+}
+.phone {
+  font-size: 18px;
+}
+.space-row {
+  height: 10px;
+}
+#addressMap {
+  width: 500px;
+  height: 400px;
+  background-color: #ccc;
 }
 p {
   line-height: 1.8;
+  font-family: 'Open Sans', sans-serif;
+}
+blockquote {
+  line-height: 1.8;
+  font-family: 'Open Sans', sans-serif;
+}
+div {
+  line-height: 1.8;
+  font-family: 'Open Sans', sans-serif;
 }
 footer {
   padding-top: 5px;

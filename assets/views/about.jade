@@ -1,0 +1,41 @@
+extend layout
+
+block content
+  div.container
+    .content-container
+      .row
+        .col.s12
+          h4 Europlex
+      .row
+        .col.s12.m7
+          |Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
+          | Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. 
+          | Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. 
+          | Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. 
+        .col.s4.offset-l1.hide-on-small-only
+          div#addressMap
+          script(src='https://maps.googleapis.com/maps/api/js' async defer)
+      .row.space-row
+      .row
+        .col.s12.m3.offset-m8
+          .row
+            .col.s1
+              i.material-icons.tiny work 
+            .col.s11
+             .address
+              p ZI Nivelles Sud zone II
+              p 1400 Nivelles (Thines)
+          .row
+            .col.s1
+              i.material-icons.tiny phone 
+            .col.s11
+              span 
+                a(href='tel:+32498998900')
+                 |+32 498 99 89 00
+          .row
+           .col.s1
+              i.material-icons.tiny email 
+           .col.s11
+              span
+                a(href='mailto:contact@europlex.com')
+                  |contact@europlex.com
