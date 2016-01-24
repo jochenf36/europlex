@@ -12,7 +12,7 @@
     "eslint": "eslint 'assets/js/*.js'",
     "browsersync": "browser-sync start --files './assets/**' --proxy localhost:3002 ",
     "dev": "npm run start-server & npm run browsersync",
-    "start":"npm run start-server"
+    "start":"node server.js"
   },
   "repository": {
    "type": "git",
