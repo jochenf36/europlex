@@ -4,7 +4,7 @@
 /*
  * Grab a custom font from Google
  */
-@import url("http://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 /*
  * Nib provides a CSS reset
@@ -163,7 +163,7 @@ main {
 }
 #addressMap {
   width: 500px;
-  height: 400px;
+  height: 300px;
   background-color: #ccc;
 }
 p {
