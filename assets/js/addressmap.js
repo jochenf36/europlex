@@ -7,7 +7,7 @@ function initMap() {
   var mapDiv = document.getElementById('addressMap');
   var map = new google.maps.Map(mapDiv, {
     center: myLatLng,
-    zoom: 14,
+    zoom: 12,
   });
 
   var image = 'img/work.png';
