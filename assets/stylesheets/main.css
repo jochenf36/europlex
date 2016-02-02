@@ -128,9 +128,7 @@ header {
 .header {
   padding: 25px 30px;
   height: 130px;
-  background-color: #0b3851;
-  background-image: url("/img/header-1.png");
-  background-repeat: no-repeat;
+  background-color: #29334d;
 }
 .languages {
   color: #ff1654;
@@ -183,5 +181,5 @@ footer {
   font-size: 13px;
 }
 .footer {
-  background-color: #0b3851 !important;
+  background-color: #29334d !important;
 }
