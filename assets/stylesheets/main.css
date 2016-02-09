@@ -183,3 +183,9 @@ footer {
 .footer {
   background-color: #29334d !important;
 }
+.bigTitle {
+  padding-top: 2%;
+}
+.icon-space {
+  padding-right: 3px;
+}

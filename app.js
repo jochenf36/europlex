@@ -12,7 +12,7 @@ var about = require('./routes/about');
 
 var stylus = require('stylus');
 var nib = require('nib');
-
+var i18n = require('i18n-2');
 var app = express();
 
 // view engine setup
@@ -33,6 +33,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'assets')));
+
+i18n.expressBind(app, {
+  // setup some locales - other locales default to vi silently
+  locales: ['en', 'fr'],
+  // set the default locale
+  defaultLocale: 'en',
+  // set the cookie name
+  cookieName: 'locale'
+});
+
+// set up the middleware
+app.use(function(req, res, next) {
+  req.i18n.setLocaleFromQuery();
+  req.i18n.setLocaleFromCookie();
+  next();
+});
 
 app.use('/', routes);
 app.use('/users', users);
