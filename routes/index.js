@@ -8,6 +8,7 @@ router.get('/', function index(req, res) {
     about: req.i18n.__('about'),
     contact: req.i18n.__('contact'),
     location: req.i18n.__('location'),
+    lang: req.i18n.getLocale(),
     'mainTitle': req.i18n.__('mainTitle'),
     'mainTitle2': req.i18n.__('mainTitle2'),
     'introP1': req.i18n.__('introP1'),

@@ -1,1 +1,26 @@
-{}
+{
+	"title": "title",
+	"about": "about",
+	"contact": "contact",
+	"location": "location",
+	"mainTitle": "mainTitle",
+	"mainTitle2": "mainTitle2",
+	"introP1": "introP1",
+	"introP2": "introP2",
+	"introP21": "introP21",
+	"introP3": "introP3",
+	"introP4": "introP4",
+	"introP5": "introP5",
+	"introP51": "introP51",
+	"introP52": "introP52",
+	"introP53": "introP53",
+	"introP54": "introP54",
+	"introP55": "introP55",
+	"introP6": "introP6",
+	"introP61": "introP61",
+	"introP62": "introP62",
+	"introP63": "introP63",
+	"introP7": "introP7",
+	"introP8": "introP8",
+	"introP9": "introP9"
+}

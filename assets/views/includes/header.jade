@@ -1,11 +1,11 @@
 //- dropdown language
 ul#dropdown1.dropdown-content.languages
   il
-    a.languages nl
+    a.languages(href="/?lang=nl") nl
   il
-    a.languages fr  
+    a.languages(href="/?lang=fr") fr
   il
-    a.languages eng
+    a.languages(href="/?lang=en") en
     
 header
   nav.header
@@ -20,9 +20,9 @@ header
             a(href='/contact') #{contact}
           li
             a(href="#!" data-activates="dropdown1").dropdown-button
-              |nl
-              i.material-icons.right language
-              
+              i.material-icons.right.img-country language
+              | #{lang}
+
          ul#slide-out.side-nav
           li 
             a(href='/about') #{about}

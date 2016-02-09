@@ -36,19 +36,25 @@ app.use(express.static(path.join(__dirname, 'assets')));
 
 i18n.expressBind(app, {
   // setup some locales - other locales default to vi silently
-  locales: ['en', 'fr'],
+  locales: ['en', 'fr', 'nl'],
   // set the default locale
   defaultLocale: 'en',
   // set the cookie name
   cookieName: 'locale'
 });
 
-// set up the middleware
-app.use(function(req, res, next) {
-  req.i18n.setLocaleFromQuery();
+function handlerLang(req, res, next){
+  // or set it via the cookie
+  res.cookie('locale', req.query.lang);
   req.i18n.setLocaleFromCookie();
+  req.i18n.setLocaleFromQuery();
+
+  // redirect back
   next();
-});
+};
+
+app.use('/', handlerLang);
+
 
 app.use('/', routes);
 app.use('/users', users);
