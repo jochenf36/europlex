@@ -11,7 +11,7 @@
     "build:watch": "watch 'npm run build' ./assets",
     "eslint": "eslint 'assets/js/*.js'",
     "browsersync": "browser-sync start --files './assets/**' --proxy localhost:3002 ",
-    "dev": "npm run start-server & npm run browsersync",
+    "dev": "npm run start-server",
     "start": "node server.js"
   },
   "repository": {
