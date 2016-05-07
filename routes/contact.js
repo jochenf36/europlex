@@ -4,6 +4,7 @@ var router = express.Router(); //eslint-disable-line
 /* GET home page. */
 router.get('/', function index(req, res) {
   res.render('contact', {
+    home: req.i18n.__('home'),
     title: req.i18n.__('title'),
     about: req.i18n.__('about'),
     contact: req.i18n.__('contact'),
