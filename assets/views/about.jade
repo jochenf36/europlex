@@ -9,16 +9,32 @@ block content
           h4 Europlex
       .row
         .col.s12.m7
-          |Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
-          | Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. 
-          | Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. 
-          | Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. 
+            div!=  marked(paragraph1)
+            br
+            div!=  marked(paragraph2)   
+            br
+            div!=  marked(paragraph3)
+            br
+            div!=  marked(paragraph4)
+              div.lightPadding
+                ul.collection
+                  each machine in machines
+                    li.collection-item #{machine.fields.machineName}
+            div!=  marked(paragraph5)
+             div.lightPadding
+                ul.collection
+                  each skill in skills
+                    li.collection-item #{skill.fields.name}
+            br
+            div!=  marked(paragraph6)
+            br
+            div!=  marked(paragraph7)
+            br
+            div!=  marked(paragraph8) 
         .col.s4.offset-l1.hide-on-small-only
           div#addressMap
           script(src='https://maps.googleapis.com/maps/api/js')
-      .row.space-row
-      .row
-        .col.s12.m6.offset-m8
+          br
           .row
             .col.s1
               i.material-icons.tiny work 
@@ -32,8 +48,8 @@ block content
               i.material-icons.tiny phone 
             .col.s11
               span 
-                a(href='tel:+32067550790 ')
-                 |+32 067 550 790 
+                a(href='tel:+3267550791')
+                 |+32 (0)67 55 07 91
           .row
            .col.s1
               i.material-icons.tiny email 
