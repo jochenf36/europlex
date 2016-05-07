@@ -22,7 +22,7 @@ app.set('view engine', 'jade');
 // stylus engine
 app.use(stylus.middleware(
   { src: path.join(__dirname, 'assets')
-  , compile: compile
+  ,compile: compile
   }
 ))
 
@@ -32,29 +32,21 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'assets')));
 
 i18n.expressBind(app, {
-  // setup some locales - other locales default to vi silently
-  locales: ['en', 'fr', 'nl'],
-  // set the default locale
-  defaultLocale: 'en',
-  // set the cookie name
-  cookieName: 'locale'
+  // setup some locales - other locales default to en silently
+    locales: ['en', 'nl', 'fr'],
+    query: true,
 });
 
 function handlerLang(req, res, next){
-  // or set it via the cookie
-  res.cookie('locale', req.query.lang);
   req.i18n.setLocaleFromCookie();
-  req.i18n.setLocaleFromQuery();
-
-  // redirect back
   next();
 };
 
-app.use('/', handlerLang);
 
+app.use('/', handlerLang);
+app.use(express.static(path.join(__dirname, 'assets')));
 
 app.use('/', routes);
 app.use('/users', users);

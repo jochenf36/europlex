@@ -1,7 +1,7 @@
 {
-	"home": 'Aquile'
-	"title": "Titre",
-	"about": "About",
+	"home": "Aquile",
+	"title": "Europlex",
+	"about": "Atout",
 	"contact": "Contact",
-	"location": "Location",
+	"location": "Location"
 }
