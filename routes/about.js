@@ -8,8 +8,14 @@ var contents;
 var machines = [];
 var skills = [];
 
-function getMainContent() {
-  return resources.getEntry('59TwPw6IhyYYEmgMmK6oiE');
+function getMainContent(lang) {
+  if (lang === 'nl') {
+    return resources.getEntry('59TwPw6IhyYYEmgMmK6oiE');
+  } else if (lang === 'fr') {
+    return resources.getEntry('6xH3j0Frq0kU4y8Y4eqg2y');
+  } else {
+    return resources.getEntry('66Zg5DBPvUCYekyiYUECGs');
+  }
 }
 
 function getMachines() {
@@ -31,14 +37,20 @@ function getSkills() {
 }
 
 function getData(res, req) {
-  getMainContent().then(function renderMainContent(contentResult) {
+  getMainContent(req.i18n.getLocale()).then(function renderMainContent(contentResult) {
     contents = contentResult.fields;
 
     getMachines().then(function renderMachines(machineResult) {
       machines = machineResult.items;
+      var filteredMachines = machines.filter(function filterMachine(machine) {
+        return machine.fields.language === req.i18n.getLocale();
+      });
 
       getSkills().then(function renderSkills(skillsResult) {
         skills = skillsResult.items;
+        var filteredskills = skills.filter(function filterSkill(skill) {
+          return skill.fields.language[0] === req.i18n.getLocale();
+        });
 
         res.render('about', {
           marked: marked,
@@ -56,8 +68,8 @@ function getData(res, req) {
           paragraph6: contents.paragraph6,
           paragraph7: contents.paragraph7,
           paragraph8: contents.paragraph8,
-          machines: machines,
-          skills: skills,
+          machines: filteredMachines,
+          skills: filteredskills,
         });
       });
     }).catch(logger.log);
