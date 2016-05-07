@@ -4,75 +4,13 @@ block content
   div.container
     .content-container
       .row
-        .col.s12.m4
-          include ./includes/cards/card1.jade
-        .col.s12.m4
-          include ./includes/cards/card2.jade
-        .col.s12.m4
-          include ./includes/cards/card3.jade
-      .row
-        .col.s12.m4
-          include ./includes/cards/card4.jade
-        .col.s12.m4 
-         include ./includes/cards/card5.jade
-        .col.s12.m4
-          include ./includes/cards/card6.jade
-      .row
-        .col.s12
-          div
-            h3.center-align #{mainTitle}
-            hr(width='50%').mini-title
-      .row
-        .col.s10.offset-s1
-          div(align='justify')
-            p #{introP1}
-      .row
-        .col.s12.offset-s1
-          div 
-            h4.bigTitle #{mainTitle2}
-      .row
-        .col.s10.offset-s1
-          div(align='justify')
-            p #{introP2} 
-              b #{introP21}
-        .col.s9.offset-s2
-          blockquote 
-            p #{introP3}
-        .col.s10.offset-s1
-          div(align='justify')
-            p #{introP4}
-            
-      .row
-        .col.s10.offset-s1
-          div(align='justify')
-            h5 #{introP5}
-      .row
-        .col.s8.offset-s2
-          ul.collection
-            li.collection-item #{introP51}
-            li.collection-item #{introP52}
-            li.collection-item #{introP53}
-            li.collection-item #{introP54}
-            li.collection-item #{introP55}
-      .row
-        .col.s10.offset-s1
-          div(align='justify')
-          h5 #{introP6}
-      .row
-        .col.s8.offset-s2
-            ul.collection
-              li.collection-item #{introP61}
-              li.collection-item #{introP62}
-              li.collection-item #{introP63}
-      .row
-        .col.s10.offset-s1
-          div(align='justify')
-          p #{introP7}
-      .row
-        .col.s10.offset-s1
-          div(align='justify')
-          p #{introP8}          
-      .row
-        .col.s10.offset-s1
-          div(align='justify')
-          p #{introP9}
+        each card in cards
+          .col.s12.m4
+            .card.medium
+              .card-image
+                img(src='#{card.image}').materialboxed
+                span.card-title #{card.title}
+              .card-content
+                p
+                  | I am a very simple card. I am good at containing small bits of information.
+                  | I am convenient because I require little markup to use effectively.
