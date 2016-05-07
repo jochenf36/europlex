@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router(); //eslint-disable-line
+var marked = require('marked');
 var resources = require('../resources.js');
 var logger = require('../logger.js');
 
@@ -25,6 +26,8 @@ function getData(res, req) {
       return a.order - b.order;
     });
     res.render('index', {
+      marked: marked,
+      home: req.i18n.__('home'),
       title: req.i18n.__('title'),
       about: req.i18n.__('about'),
       contact: req.i18n.__('contact'),
